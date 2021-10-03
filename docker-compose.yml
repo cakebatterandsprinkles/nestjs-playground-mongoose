@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: mongo # container image
+    restart: always
+    ports: # format: “host:container”
+      - 27017:27017
+    environment: # env variables to pass to container
+      MONGODB_DATABASE: nest-test
